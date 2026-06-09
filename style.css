@@ -431,10 +431,32 @@ h1 {
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
+  body {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  #app {
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+  }
+
   .glass-card {
     padding: 1.5rem;
-    border-radius: 16px;
+    border-radius: 0;
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
+
+  .glass-card::-webkit-scrollbar {
+    display: none;
+  }
+
   h1 {
     font-size: 1.5rem;
   }
