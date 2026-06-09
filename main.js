@@ -152,3 +152,28 @@ document.querySelectorAll('.branch-chip').forEach(chip => {
 checkStatus();
 updateWhatsAppLink();
 setInterval(checkStatus, 60000);
+
+// vCard Generation
+document.getElementById('save-vcard-btn').addEventListener('click', () => {
+  const vcardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Magnum Tuition Class
+ORG:Magnum Tuition Class
+TITLE:CBSE Tuition Centre
+TEL;TYPE=WORK,VOICE:09447474488
+TEL;TYPE=WORK,VOICE:09037603754
+ADR;TYPE=WORK;LABEL="Elamakkara":;;3rd floor, Desabhimani Rd, opposite B.V.M.School;Elamakkara, Kochi;Kerala;682026;India
+ADR;TYPE=WORK;LABEL="Palarivattom":;;3rd Floor, Veeyes Building, Mahakavi Vyloppilly Road, near KSFE;Palarivattom, Kochi;Kerala;682025;India
+URL:https://odoocrafts.github.io/magnum_tution/
+END:VCARD`;
+
+  const blob = new Blob([vcardData], { type: 'text/vcard' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Magnum_Tuition_Class.vcf';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});

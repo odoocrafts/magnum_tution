@@ -291,12 +291,43 @@ h1 {
   padding: 1rem;
 }
 
-.hours-section h2 {
+.hours-details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none; /* remove default triangle */
+}
+
+.hours-details summary::-webkit-details-marker {
+  display: none; /* Safari */
+}
+
+.hours-details summary h2 {
   font-size: 1.1rem;
-  margin-bottom: 1rem;
   color: var(--text-muted);
-  text-align: center;
   font-weight: 600;
+  margin: 0;
+}
+
+.dropdown-icon {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: transform 0.3s ease;
+}
+
+.hours-details[open] .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.hours-details .hours-list {
+  margin-top: 1rem;
+  animation: fadeInDown 0.3s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hours-list {
