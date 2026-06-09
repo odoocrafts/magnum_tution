@@ -78,8 +78,8 @@ function checkStatus() {
 // WhatsApp Integration Logic
 let selectedGrade = null;
 let selectedSubject = null;
-let selectedBranchPhone = null;
-let selectedBranchName = null;
+let selectedBranchPhone = '919037603754';
+let selectedBranchName = 'Palarivattom';
 
 function updateWhatsAppLink() {
   const btn = document.getElementById('whatsapp-btn');
@@ -131,19 +131,12 @@ document.querySelectorAll('.topic-chip').forEach(chip => {
   });
 });
 
-document.querySelectorAll('.branch-chip').forEach(chip => {
-  chip.addEventListener('click', () => {
-    // Toggle active
-    if (chip.classList.contains('active')) {
-      chip.classList.remove('active');
-      selectedBranchPhone = null;
-      selectedBranchName = null;
-    } else {
-      document.querySelectorAll('.branch-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      selectedBranchPhone = chip.getAttribute('data-phone');
-      selectedBranchName = chip.textContent;
-    }
+document.querySelectorAll('.branch-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.branch-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    selectedBranchPhone = card.getAttribute('data-phone');
+    selectedBranchName = card.getAttribute('data-name');
     updateWhatsAppLink();
   });
 });

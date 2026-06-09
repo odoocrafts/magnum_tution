@@ -247,26 +247,76 @@ h1 {
   margin-top: 8px;
 }
 
-.contact-link {
+.branch-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.branch-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.branch-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.branch-card.active {
+  background: rgba(123, 44, 191, 0.2);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(123, 44, 191, 0.3);
+}
+
+.branch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.branch-header h4 {
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-glow);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.phone-link:hover {
+  color: #fff;
+}
+
+.branch-card address {
+  font-style: normal;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.contact-link.whatsapp {
   display: flex;
   align-items: center;
   gap: 12px;
   color: var(--text-main);
   text-decoration: none;
-  background: rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   border-radius: 12px;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
-}
-
-.contact-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--primary-color);
-  transform: translateX(5px);
-}
-
-.contact-link.whatsapp {
   background: rgba(37, 211, 102, 0.15);
   border: 1px solid rgba(37, 211, 102, 0.3);
 }
@@ -279,18 +329,6 @@ h1 {
 
 .contact-link.whatsapp svg {
   color: #25D366;
-}
-
-.contact-link svg {
-  color: var(--primary-glow);
-  flex-shrink: 0;
-}
-
-.contact-link address {
-  font-style: normal;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: var(--text-muted);
 }
 
 .hours-section {
