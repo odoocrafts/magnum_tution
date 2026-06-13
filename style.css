@@ -461,3 +461,24 @@ h1 {
     font-size: 1.5rem;
   }
 }
+
+.branding-footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 0.5rem;
+}
+
+.branding-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease;
+}
+
+.branding-footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
