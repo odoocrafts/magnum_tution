@@ -1,13 +1,13 @@
 :root {
-  --primary-color: #7b2cbf;
-  --primary-glow: #9d4edd;
-  --bg-color: #10002b;
+  --primary-color: #b91c1c;
+  --primary-glow: #f59e0b;
+  --bg-color: #0f172a;
   --card-bg: rgba(255, 255, 255, 0.05);
-  --card-border: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(245, 158, 11, 0.2);
   --text-main: #ffffff;
-  --text-muted: #c8b6ff;
-  --success: #06d6a0;
-  --danger: #ef476f;
+  --text-muted: #cbd5e1;
+  --success: #10b981;
+  --danger: #ef4444;
   --font-family: 'Outfit', sans-serif;
 }
 
@@ -51,7 +51,7 @@ body {
   right: -10%;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, #3a0ca3, transparent 70%);
+  background: radial-gradient(circle, var(--primary-glow), transparent 70%);
   animation-delay: -3s;
 }
 
@@ -60,7 +60,7 @@ body {
   left: 50%;
   width: 30vw;
   height: 30vw;
-  background: radial-gradient(circle, #560bad, transparent 70%);
+  background: radial-gradient(circle, #881337, transparent 70%);
   animation-delay: -5s;
 }
 
@@ -407,7 +407,7 @@ h1 {
   width: 100%;
   padding: 14px;
   text-align: center;
-  background: linear-gradient(135deg, var(--primary-color), #3a0ca3);
+  background: linear-gradient(135deg, var(--primary-color), #881337);
   color: white;
   text-decoration: none;
   border-radius: 12px;
